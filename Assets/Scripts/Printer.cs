@@ -7,7 +7,8 @@ public class Printer : MonoBehaviour
 {
     [SerializeField] private Transform[] papersPlace = new Transform[10];
     [SerializeField] private GameObject paper;
-    [SerializeField] private float paperDeliveryTime, YAxis;
+    public float paperDeliveryTime, YAxis;
+    public int countPapers;
 
     private void Awake()
     {
@@ -25,7 +26,6 @@ public class Printer : MonoBehaviour
 
     public IEnumerator PrintPaper(float Time)
     {
-        var countPapers = 0;
         var PP_index = 0;
 
         while (countPapers < 100)
